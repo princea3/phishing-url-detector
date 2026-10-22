@@ -1,0 +1,105 @@
+{
+  "best_model": "Gradient Boosting",
+  "n_rows_clean": 57405,
+  "n_train": 45924,
+  "n_test": 11481,
+  "n_lexical_features": 98,
+  "n_all_features": 111,
+  "class_counts": {
+    "legitimate": 26908,
+    "phishing": 30497
+  },
+  "test_results": {
+    "Gradient Boosting": {
+      "Accuracy": 0.9065,
+      "Precision": 0.9258,
+      "Recall": 0.8959,
+      "F1": 0.9106,
+      "ROC_AUC": 0.9679,
+      "Train_seconds": 5.9693
+    },
+    "Random Forest": {
+      "Accuracy": 0.9045,
+      "Precision": 0.917,
+      "Recall": 0.902,
+      "F1": 0.9094,
+      "ROC_AUC": 0.967,
+      "Train_seconds": 4.4523
+    },
+    "Decision Tree": {
+      "Accuracy": 0.8932,
+      "Precision": 0.9081,
+      "Recall": 0.889,
+      "F1": 0.8984,
+      "ROC_AUC": 0.9447,
+      "Train_seconds": 0.5262
+    },
+    "Logistic Regression": {
+      "Accuracy": 0.8614,
+      "Precision": 0.8587,
+      "Recall": 0.8847,
+      "F1": 0.8715,
+      "ROC_AUC": 0.9378,
+      "Train_seconds": 3.255
+    }
+  },
+  "ablation": {
+    "URL-only (98 feats)": {
+      "Accuracy": 0.9065,
+      "Precision": 0.9258,
+      "Recall": 0.8959,
+      "F1": 0.9106,
+      "ROC_AUC": 0.9679,
+      "Train_seconds": 5.9693
+    },
+    "All features (111 feats)": {
+      "Accuracy": 0.9558,
+      "Precision": 0.9591,
+      "Recall": 0.9577,
+      "F1": 0.9584,
+      "ROC_AUC": 0.9913,
+      "Train_seconds": 6.4353
+    }
+  },
+  "cv_f1_mean": 0.908503157438201,
+  "cv_f1_std": 0.0032514789847172274,
+  "confusion": {
+    "tn": 4944,
+    "fp": 438,
+    "fn": 635,
+    "tp": 5464
+  },
+  "top_features": {
+    "directory_length": 0.1188,
+    "length_url": 0.0588,
+    "qty_slash_url": 0.0417,
+    "file_length": 0.0407,
+    "domain_length": 0.0366,
+    "qty_slash_directory": 0.0357,
+    "qty_underline_directory": 0.0342,
+    "qty_dot_directory": 0.0336,
+    "qty_vowels_domain": 0.033,
+    "qty_dot_domain": 0.0309,
+    "qty_equal_directory": 0.0221,
+    "qty_percent_directory": 0.0219,
+    "qty_equal_file": 0.0217,
+    "qty_dot_file": 0.0196,
+    "qty_exclamation_directory": 0.0182
+  },
+  "subgroups": {
+    "Bare domain (no path)": {
+      "Test URLs": 3252,
+      "Phishing share": 0.042,
+      "Accuracy": 0.959,
+      "False-alarm rate": 0.002,
+      "Miss rate": 0.928
+    },
+    "URL has a path": {
+      "Test URLs": 8229,
+      "Phishing share": 0.724,
+      "Accuracy": 0.886,
+      "False-alarm rate": 0.19,
+      "Miss rate": 0.085
+    }
+  }
+}
